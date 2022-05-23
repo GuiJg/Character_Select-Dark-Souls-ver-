@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character select</title>
+    <link rel="stylesheet" href="./src/css/Link/variaveis.css">
+    <link rel="stylesheet" href="./src/css/Link/reset.css">
+    <link rel="stylesheet" href="./src/css/Link/fontes.css">
+    <link rel="stylesheet" href="./src/css/Link/animacoes.css">
+    <link rel="stylesheet" href="./src/css/Link/estilos.css">
+    <link rel="stylesheet" href="./src/css/Link/responsivo.css">
+
+</head>
+
+<body>
+    <main>
+        <header class="cabecalho">
+            <h1 class="titulo">
+                Character Select
+            </h1>
+        </header>
+        <div class="selecao-de-personagens">
+            <div class="personagem-maior personagem-player-1">
+                <img src="./src/css/imagens/solaire.png" alt="Imagem do personagem Solaire jogador 1"
+                    id="personagem-jogador-1">
+                <div class="nome">
+                    <h2 id= "nome-jogador-1">Solaire</h2>
+                </div>
+            </div>  
+
+            <ul class="lista-de-personagens">
+                <li class="personagem selecionado" id="solaire" data-name="Solaire">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/solaire.jpg" alt="Personagem Solaire selecionado jogador 1">
+                </li>
+
+                <li class="personagem" id="artorias" data-name="Artorias">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/artorias.jpg"
+                        alt="Imagem do personagem Artorias selecionado jogador 1">
+                </li>
+
+                <li class="personagem" id="ashen-one" data-name="Ashen One">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/ashen-one.jpg"
+                        alt="Imagem do personagem Ashen One selecionado jogador 1">
+                </li>
+
+                <li class="personagem" id="andre-blacksmith" data-name="Andre Blacksmith">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/andre-blacksmith.jpg"
+                        alt="Imagem do personagem Andre Blacksmith selecionado jogador 1">
+                </li>
+
+                <li class="personagem" id="fire-keeper" data-name="Fire Keeper">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/fire-keeper.jpg"
+                        alt="Imagem do personagem Fire Keeper selecionado jogador 1">
+                </li>
+
+                <li class="personagem" id="sif" data-name="Sif">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/sif.jpg" alt="Imagem do personagem Sif selecionado jogador 1">
+                </li>
+
+                <li class="personagem" id="siegmeyer-of-catarina" data-name="Siegmeyer of Catarina">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/siegmeyer-of-catarina.jpg"
+                        alt="Imagem do personagem Siegmeyer of Catarina selecionado jogador 1">
+                </li>
+
+                <li class="personagem" id="patches" data-name="Patches">
+                    <span class="tag">1P</span>
+                    <img src="./src/css/imagens/patches.jpg"
+                        alt="Imagem do personagem Patches selecionado jogador 1">
+                </li>
+
+                <li class="personagem player-2-selecionado" id="soul-of-cinder" data-name="Soul of Cinder">
+                    <span class="tag">2P</span>
+                    <img src="./src/css/imagens/soul-of-cinder.jpg"
+                        alt="Imagem do personagem Soul of Cinder selecionado jogador 2">
+                </li>
+            </ul>
+
+            <div class="personagem-maior personagem-player-2">
+                <img src="./src/css/imagens/soul-of-cinder.png" alt="Imagem do personagem Soul of Cinder jogador 2"
+                    id="personagem-jogador-2">
+                <div class="nome">
+                    <h2>Soul of Cinder</h2>
+                </div>
+            </div>
+        </div>
+        <audio id="player" src="./src/css/imagens/audio.mp3" loop></audio>
+        <button class="botao1" onclick="document.getElementById('player').play()">Play</button>
+        <button class="botao2" onclick="document.getElementById('player').pause()">Pause</button>
+
+    </main>
+    <script src="./src/css/js/index.js"></script>
+</body>
+
+</html>

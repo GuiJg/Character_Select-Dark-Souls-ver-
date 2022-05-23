@@ -1,0 +1,201 @@
+body {
+    font-family: 'ds', Courier, monospace;
+    background: var(--cor-secundaria);
+}
+
+body::before {
+    content: '';
+    background-image: url("../imagens/background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cabecalho {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .titulo {
+    color: var(--cor-titulo-fraco);
+    text-transform: uppercase;
+    font-size: 52px;
+    line-height: 102px;
+    text-decoration: line-through 1px;
+}
+
+.selecao-de-personagens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecao-de-personagens .personagem-maior {
+    text-align: center;
+    width: 30%;
+    height: 70vh;
+    position: relative;
+}
+
+.selecao-de-personagens .personagem-maior img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.selecao-de-personagens .personagem-maior.personagem-player-1 img {
+    height: 110%;
+    top: 40%;
+}
+
+.selecao-de-personagens .personagem-maior.personagem-player-2 img {
+    height: 100%;
+    top: 45%;
+}
+
+.selecao-de-personagens .personagem-maior .nome::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.selecao-de-personagens .personagem-maior .nome h2 {
+    color: var(--cor-padrao);
+    font-family: 'command', sans-serif;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    font-size: 30px;
+}
+
+.selecao-de-personagens .personagem-maior.personagem-player-1 .nome::before {
+    background-color: var(--cor-azul-principal);
+}
+
+.selecao-de-personagens .personagem-maior.personagem-player-2 .nome::before {
+    background-color: var(--cor-vermelha-principal);
+}
+
+.selecao-de-personagens .lista-de-personagens {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem {
+    border: 2px solid var(--cor-padrao);
+    background-color: var(--cor-padrao);
+    width: 30%;
+    height: 160px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.15s ease-in-out;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.selecionado {
+    border: 2px solid var(--cor-azul-media);
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem:hover {
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.player-2-selecionado {
+    border: 2px solid var(--cor-vermelha-fraca);
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.player-2-selecionado:hover {
+    animation: c-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: black;
+    font-weight: bold;
+    transition: opacity .3 ease-in-out;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.selecionado .tag {
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.player-2-selecionado .tag {
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.botao1 {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    align-self: center;
+    margin: -10px;
+}
+
+.botao1:hover {
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.15);
+}
+
+.botao2 {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    align-self: center;
+    margin: 25px;
+}
+
+.botao2:hover {
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.15);
+}
